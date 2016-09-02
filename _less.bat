@@ -1,3 +1,3 @@
 
-call grunt --gruntfile grunt-less.js
+call node script-less.js
 pause
