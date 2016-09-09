@@ -1,3 +1,3 @@
 
-call grunt --gruntfile grunt-babel.js
+call node script-babel.js
 pause

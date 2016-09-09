@@ -27,6 +27,6 @@ fs.readdir(path.join(dir, 'src'), function(err, data){
 				});
 			});
 		});
-	} else { console.log('No SCSS files found in '+dir); }
+	} else { console.log('No CSS files found in '+dir); }
 });
 

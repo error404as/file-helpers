@@ -1,0 +1,14 @@
+.subnav:before {
+    left: 0;
+    background: -webkit-linear-gradient(left, rgba(80,80,80, 0.26), rgba(0,0,0, 0));
+    background: linear-gradient(to right, rgba(80,80,80, 0.26), rgba(0,0,0, 0));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}

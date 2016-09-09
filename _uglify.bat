@@ -1,3 +1,3 @@
 
-call grunt --gruntfile grunt-uglify.js
+call node script-uglifyjs.js
 pause

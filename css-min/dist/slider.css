@@ -1,0 +1,1 @@
+.slider,.slider-list,.slider-track{position:relative;display:block}.slider{box-sizing:border-box}.slider-list{overflow:hidden;margin:0;padding:0}.slider-list:focus{outline:0}.slider-list.dragging{cursor:pointer;cursor:hand}.slider .list,.slider .track{transform:translate3d(0,0,0)}.slider-track{top:0;left:0}.slider-track:after,.slider-track:before{display:table;content:''}

@@ -1,0 +1,51 @@
+/* Slider */
+.slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+}
+
+.slider-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slider-list:focus
+{
+    outline: none;
+}
+.slider-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slider .track,
+.slider .list
+{
+            transform: translate3d(0, 0, 0);
+}
+
+.slider-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slider-track:before,
+.slider-track:after
+{
+    display: table;
+
+    content: '';
+}

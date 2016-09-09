@@ -27,6 +27,6 @@ fs.readdir(dir, function(err, data){
 				});
 			});
 		});
-	} else { console.log('No SCSS files found in '+dir); }
+	} else { console.log('No LESS files found in '+dir); }
 });
 
