@@ -1,3 +1,3 @@
 
-call grunt --gruntfile grunt-autoprefixer.js
+call node script-prefixer.js
 pause
