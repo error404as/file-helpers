@@ -1,3 +1,3 @@
 
-call grunt --gruntfile grunt-cssmin.js
+call node script-cssmin.js
 pause

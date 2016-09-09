@@ -1,9 +1,11 @@
+
+//var source = '@import url(http://path/to/remote/styles);';
+
 var fs = require('fs');
 var path = require('path');
-var autoprefixer = require('autoprefixer');
-var postcss = require('postcss');
+var CleanCSS = require('clean-css');
 
-var dir = 'css-prefixer';
+var dir = 'css-min';
 
 fs.readdir(path.join(dir, 'src'), function(err, data){
 	if (err){ console.log(err); return; }
@@ -15,20 +17,16 @@ fs.readdir(path.join(dir, 'src'), function(err, data){
 			fs.readFile(path.join(dir, 'src', itm),function(err,data){
 				if(err){ console.log(err); return; }
 
-				postcss([ autoprefixer ]).process(data.toString()).then(function (result) {
-					result.warnings().forEach(function (warn) {
-						console.warn(warn.toString());
-					});
+				new CleanCSS().minify(data.toString(), function (err, minified) {
+					if(err){ console.log(err); return; }
 
-					fs.writeFile(path.join(dir, 'dist', itm), result.css, function(err){
+					fs.writeFile(path.join(dir, 'dist', itm), minified.styles, function(err){
 						if(err){ console.log(err); return; }
 						console.log(itm+' - converted successfully!');
 					});
 				});
-
 			});
 		});
 	} else { console.log('No SCSS files found in '+dir); }
 });
-
 
